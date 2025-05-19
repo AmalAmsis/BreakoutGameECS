@@ -6,14 +6,26 @@ set(CMAKE_CXX_FLAGS "-Wall -Wextra")
 set(CMAKE_CXX_FLAGS_DEBUG "-g")
 set(CMAKE_CXX_FLAGS_RELEASE "-O3")
 
+
 add_executable(BAGEL main.cpp
         bagel.h
-        tests.cpp
         bagel_cfg.h
         Pong.cpp
         Pong.h
-        breakout_game/breakout_game.h
-        breakout_game/breakout_game.cpp
+        breakoutGame/breakout_game.h
+        breakoutGame/breakout_game.cpp
+
+)
+
+
+add_executable(tests
+        bagel.h
+        breakoutGame/breakout_game.h
+        breakoutGame/breakout_game.cpp
+        bagel_cfg.h
+        breakoutGame/test_firstPart.cpp
+
+
 )
 
 set(SDL_STATIC ON)
