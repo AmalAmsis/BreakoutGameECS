@@ -4,7 +4,7 @@
 
 
 constexpr Bagel Params{
-	.DynamicResize = true
+	.DynamicResize = false
 };
 
 BAGEL_STORAGE(breakout::Position, PackedStorage)
