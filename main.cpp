@@ -14,7 +14,7 @@ bool initSDL() {
         return false;
     }
     SDL_CreateWindowAndRenderer("Breakout ECS", 800, 600, 0, &window, &renderer);
-    sheet = IMG_LoadTexture(renderer, "images/breakout.png");
+    sheet = IMG_LoadTexture(renderer, "res/breakout.png");
     return window && renderer && sheet;
 }
 
