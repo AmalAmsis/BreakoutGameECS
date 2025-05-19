@@ -3,8 +3,8 @@
 #include <SDL3/SDL.h>
 #include <SDL3_image/SDL_image.h>
 #include <box2d/box2d.h>
-
 #include "lib/box2d/src/body.h"
+
 using namespace std;
 
 #include "bagel.h"

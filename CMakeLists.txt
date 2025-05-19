@@ -6,23 +6,31 @@ set(CMAKE_CXX_FLAGS "-Wall -Wextra")
 set(CMAKE_CXX_FLAGS_DEBUG "-g")
 set(CMAKE_CXX_FLAGS_RELEASE "-O3")
 
-add_executable(BAGEL main.cpp
+# Main executable
+add_executable(BAGEL
+        main.cpp
         bagel.h
         tests.cpp
         bagel_cfg.h
         Pong.cpp
         Pong.h
-)
+        )
 
+# Disable precompiled headers (fix for MinGW PCH error)
+set(CMAKE_PCH_ENABLED OFF)
+
+# SDL
 set(SDL_STATIC ON)
 set(SDL_SHARED OFF)
 add_subdirectory(lib/SDL)
-target_link_libraries(${PROJECT_NAME} PUBLIC SDL3-static)
+target_link_libraries(BAGEL PUBLIC SDL3-static)
 
+# SDL_image
 set(BUILD_SHARED_LIBS OFF)
 add_subdirectory(lib/SDL_image)
-target_link_libraries(${PROJECT_NAME} PUBLIC SDL3_image-static)
+target_link_libraries(BAGEL PUBLIC SDL3_image-static)
 
+# Box2D
 set(BOX2D_SAMPLES OFF)
 set(BOX2D_BENCHMARKS OFF)
 set(BOX2D_DOCS OFF)
@@ -30,12 +38,12 @@ set(BOX2D_PROFILE OFF)
 set(BOX2D_VALIDATE OFF)
 set(BOX2D_UNIT_TESTS OFF)
 add_subdirectory(lib/box2d)
-target_link_libraries(${PROJECT_NAME} PUBLIC box2d)
+target_link_libraries(BAGEL PUBLIC box2d)
 
+# Copy resources after build
 add_custom_command(
-        TARGET ${PROJECT_NAME} POST_BUILD
-        COMMAND ${CMAKE_COMMAND} -E
-        copy_directory_if_different
-            "${PROJECT_SOURCE_DIR}/res"
-            "$<TARGET_FILE_DIR:${PROJECT_NAME}>/res"
+        TARGET BAGEL POST_BUILD
+        COMMAND ${CMAKE_COMMAND} -E copy_directory
+        "${PROJECT_SOURCE_DIR}/res"
+        "$<TARGET_FILE_DIR:BAGEL>/res"
 )
