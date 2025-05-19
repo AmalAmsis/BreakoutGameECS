@@ -56,19 +56,19 @@ build CMakeFiles/BAGEL.dir/main.cpp.obj: CXX_COMPILER__BAGEL_Debug C$:/Users/Use
   OBJECT_DIR = CMakeFiles\BAGEL.dir
   OBJECT_FILE_DIR = CMakeFiles\BAGEL.dir
 
-build CMakeFiles/BAGEL.dir/tests.cpp.obj: CXX_COMPILER__BAGEL_Debug C$:/Users/User/Desktop/BreakoutGameECSNew/tests.cpp || cmake_object_order_depends_target_BAGEL
-  DEP_FILE = CMakeFiles\BAGEL.dir\tests.cpp.obj.d
-  FLAGS = -Wall -Wextra -g -fdiagnostics-color=always -std=gnu++17
-  INCLUDES = -IC:/Users/User/Desktop/BreakoutGameECSNew/cmake-build-debug/lib/SDL/include-revision -IC:/Users/User/Desktop/BreakoutGameECSNew/lib/SDL/include -IC:/Users/User/Desktop/BreakoutGameECSNew/lib/SDL_image/include -IC:/Users/User/Desktop/BreakoutGameECSNew/lib/box2d/src/../include -IC:/Users/User/Desktop/BreakoutGameECSNew/cmake-build-debug/lib/box2d/src
-  OBJECT_DIR = CMakeFiles\BAGEL.dir
-  OBJECT_FILE_DIR = CMakeFiles\BAGEL.dir
-
 build CMakeFiles/BAGEL.dir/Pong.cpp.obj: CXX_COMPILER__BAGEL_Debug C$:/Users/User/Desktop/BreakoutGameECSNew/Pong.cpp || cmake_object_order_depends_target_BAGEL
   DEP_FILE = CMakeFiles\BAGEL.dir\Pong.cpp.obj.d
   FLAGS = -Wall -Wextra -g -fdiagnostics-color=always -std=gnu++17
   INCLUDES = -IC:/Users/User/Desktop/BreakoutGameECSNew/cmake-build-debug/lib/SDL/include-revision -IC:/Users/User/Desktop/BreakoutGameECSNew/lib/SDL/include -IC:/Users/User/Desktop/BreakoutGameECSNew/lib/SDL_image/include -IC:/Users/User/Desktop/BreakoutGameECSNew/lib/box2d/src/../include -IC:/Users/User/Desktop/BreakoutGameECSNew/cmake-build-debug/lib/box2d/src
   OBJECT_DIR = CMakeFiles\BAGEL.dir
   OBJECT_FILE_DIR = CMakeFiles\BAGEL.dir
+
+build CMakeFiles/BAGEL.dir/breakout/breakout_game.cpp.obj: CXX_COMPILER__BAGEL_Debug C$:/Users/User/Desktop/BreakoutGameECSNew/breakout/breakout_game.cpp || cmake_object_order_depends_target_BAGEL
+  DEP_FILE = CMakeFiles\BAGEL.dir\breakout\breakout_game.cpp.obj.d
+  FLAGS = -Wall -Wextra -g -fdiagnostics-color=always -std=gnu++17
+  INCLUDES = -IC:/Users/User/Desktop/BreakoutGameECSNew/cmake-build-debug/lib/SDL/include-revision -IC:/Users/User/Desktop/BreakoutGameECSNew/lib/SDL/include -IC:/Users/User/Desktop/BreakoutGameECSNew/lib/SDL_image/include -IC:/Users/User/Desktop/BreakoutGameECSNew/lib/box2d/src/../include -IC:/Users/User/Desktop/BreakoutGameECSNew/cmake-build-debug/lib/box2d/src
+  OBJECT_DIR = CMakeFiles\BAGEL.dir
+  OBJECT_FILE_DIR = CMakeFiles\BAGEL.dir\breakout
 
 
 # =============================================================================
@@ -78,7 +78,7 @@ build CMakeFiles/BAGEL.dir/Pong.cpp.obj: CXX_COMPILER__BAGEL_Debug C$:/Users/Use
 #############################################
 # Link the executable BAGEL.exe
 
-build BAGEL.exe: CXX_EXECUTABLE_LINKER__BAGEL_Debug CMakeFiles/BAGEL.dir/main.cpp.obj CMakeFiles/BAGEL.dir/tests.cpp.obj CMakeFiles/BAGEL.dir/Pong.cpp.obj | lib/SDL/libSDL3.a lib/SDL_image/libSDL3_image.a lib/box2d/src/libbox2dd.a || lib/SDL/libSDL3.a lib/SDL_image/libSDL3_image.a lib/box2d/src/libbox2dd.a
+build BAGEL.exe: CXX_EXECUTABLE_LINKER__BAGEL_Debug CMakeFiles/BAGEL.dir/main.cpp.obj CMakeFiles/BAGEL.dir/Pong.cpp.obj CMakeFiles/BAGEL.dir/breakout/breakout_game.cpp.obj | lib/SDL/libSDL3.a lib/SDL_image/libSDL3_image.a lib/box2d/src/libbox2dd.a || lib/SDL/libSDL3.a lib/SDL_image/libSDL3_image.a lib/box2d/src/libbox2dd.a
   FLAGS = -Wall -Wextra -g
   LINK_LIBRARIES = lib/SDL/libSDL3.a  lib/SDL_image/libSDL3_image.a  lib/box2d/src/libbox2dd.a  -lm  -lkernel32  -luser32  -lgdi32  -lwinmm  -limm32  -lole32  -loleaut32  -lversion  -luuid  -ladvapi32  -lsetupapi  -lshell32  -ldinput8  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\BAGEL.dir
